@@ -1,0 +1,15 @@
+.home-location-text {
+    font-weight: 400;
+    color: #999;
+}
+
+.home-search-box,
+.home-location-box {
+    display: inline-block;
+    width: 50%;
+}
+
+.home-search-box {
+    text-align: right;
+    float: right;
+}
