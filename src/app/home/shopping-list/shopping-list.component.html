@@ -1,5 +1,16 @@
-<div class="container">
-    <div class="shopping-box">
-        <div class="shopping" *ngFor="let item of shopInfoList"></div>
-    </div>
+<div class="shopping-box">
+    <a class="shopping" *ngFor="let item of shopInfoList">
+        <div class="shopping-logo">
+            <img src="{{item.image_path}}" alt="{{item.name}}" width="70" height="70" class="shopping-logo-img">
+            <span>{{item.order_lead_time}} 分钟</span>
+        </div>
+        <div class="shopping-content">
+            <div class="shopping-title">{{item.name}}</div>
+            <span>月售{{item.recent_order_num}}单</span>
+            <div class="shopping-delivery">{{item.piecewise_agent_fee.description}}</div>
+            <div class="shopping-activity">
+
+            </div>
+        </div>
+    </a>
 </div>
