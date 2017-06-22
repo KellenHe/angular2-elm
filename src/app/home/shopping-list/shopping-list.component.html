@@ -1,15 +1,26 @@
 <div class="shopping-box">
-    <a class="shopping" *ngFor="let item of shopInfoList">
+    <a href="#" class="shopping" *ngFor="let item of shopInfoList; let idx=index" [tooltip]="shoppingActive" placement="{{(idx+1)%4===0?'left':'right'}}">
+        <ng-template #shoppingActive>
+            <div class="shopping-active-title">{{item.name}}</div>
+            <div class="shopping-active-flavors"></div>
+            <ul class="shopping-activities">
+                <li *ngFor="let support of item.supports">
+                    <span [ngClass]="{'shopping-support-active' : support.icon_color === '57A9FF', 'shopping-support': support.icon_color === '999999'}">{{support.icon_name}}</span>
+                    <span>{{support.description}}</span>
+                </li>
+            </ul>
+        </ng-template>
         <div class="shopping-logo">
             <img src="{{item.image_path}}" alt="{{item.name}}" width="70" height="70" class="shopping-logo-img">
             <span>{{item.order_lead_time}} 分钟</span>
         </div>
         <div class="shopping-content">
             <div class="shopping-title">{{item.name}}</div>
+            <rating [(ngModel)]='item.rating' [max]="5" [readonly]="true" style="color: #ffc30c"></rating>
             <span>月售{{item.recent_order_num}}单</span>
             <div class="shopping-delivery">{{item.piecewise_agent_fee.description}}</div>
             <div class="shopping-activity">
-
+                <span [ngClass]="{'shopping-support-active' : support.icon_color === '57A9FF', 'shopping-support': support.icon_color === '999999'}" *ngFor="let support of item.supports">{{support.icon_name}}</span>
             </div>
         </div>
     </a>

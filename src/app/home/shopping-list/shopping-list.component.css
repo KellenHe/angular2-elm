@@ -12,6 +12,10 @@
     font-size: 12px;
 }
 
+.shopping:hover {
+    background-color: #f5f5f5;
+}
+
 .shopping-logo {
     padding: 20px;
     float: left;
@@ -41,4 +45,69 @@
 
 .shopping-delivery {
     margin-top: 6px;
+}
+
+.shopping-activity {
+    margin-top: 6px;
+}
+
+.shopping-support-active {
+    background: #57A9FF;
+    padding: 1px;
+}
+
+.shopping-support {
+    background: #fff;
+    color: #999999 !important;
+    border: 1px solid;
+}
+
+.shopping-activity span {
+    display: inline-block;
+    margin-right: 3px;
+    color: #fff;
+    font-size: 12px;
+    font-style: normal;
+    width: 18px;
+    text-align: center;
+    border-radius: 2px;
+    line-height: 16px;
+}
+
+:host >>> .tooltip-inner {
+    background-color: #fff;
+    border: 2px solid #ddd;
+    color: #f5f5f5;
+    width: 295px;
+    max-width: 295px;
+    text-align: left;
+}
+
+:host >>> .tooltip .tooltip-arrow {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.shopping-active-title {
+    color: #333;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.shopping-active-flavors {
+    border-bottom: 1px solid #dcdcdc;
+    margin-top: 16px;
+}
+
+.shopping-activities {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    min-height: 15px;
+}
+
+.shopping-activities li {
+    margin: 10px 0;
+    color: #666;
+    font-size: 12px;
 }
